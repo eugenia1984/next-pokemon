@@ -37,6 +37,7 @@ Small application for managing ISR and SSG.
 > .next
 > components
   > layouts
+    Layout.tsx
   > pokemon
   > ui
 > node_modules
