@@ -1,24 +1,25 @@
-#NEXTjs Pokemon App
+# <img width="38" height="38" src="https://img.icons8.com/color/38/pokemon.png" alt="pokemon"/> NEXTjs Pokemon App
 
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app), from teh course **NEXTjs** of Fernando Herrera at Udemy's learning platform.
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app), from the course **NEXTjs** of Fernando Herrera at Udemy's learning platform.
 
-
----
-
-## Demo📦
+Small application for managing ISR and SSG.
 
 ---
 
-## Features📢
+## 📦 Demo 
+
+---
+
+## 📢 Features
 
 
-🔜 
+🔜 A Pokemon's web application using an API
 
 ✔️
 
 ---
 
-## Technologies 🛠️
+## 🛠️ Technologies 
 
 - <img width="28" height="28" src="https://img.icons8.com/external-tal-revivo-color-tal-revivo/28/external-typescript-an-open-source-programming-language-developed-and-maintained-by-microsoft-logo-color-tal-revivo.png" alt="typescript icon"/> [**TypeScript**](https://www.typescriptlang.org/)
 
@@ -26,10 +27,44 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 - <img width="28" height="28" src="https://img.icons8.com/color/28/nextjs.png" alt="nextjs icon"/> [**Nextjs**](https://nextjs.org/)
 
+- [**NextUI**](https://nextui.org/)
 
 ---
 
-## Notes
+##Project structure
+
+```
+> .next
+> components
+  > layouts
+  > pokemon
+  > ui
+> node_modules
+> pages
+  > api
+  _ app.tsx
+  _document.tsx
+  index.tsx
+> public
+  favicon.ico
+> styles
+  globals.css
+> theme
+  darktheme.ts
+  index.ts
+.eslintrc.json
+.gitignore
+next-env.d.ts
+next.config.js
+pckage.json
+README.md
+tsconfig.json
+yarn.lock
+```
+
+---
+
+##  <img width="30" height="30" src="https://img.icons8.com/plasticine/30/apple-notes--v1.png" alt="apple notes"/> Notes
 
 I appreciate your interest in this Project ⌨️ with ❤️ by [María Eugenia Costa](https://github.com/eugenia1984) 😊 and follow me at [LinkedIn](http://www.linkedin.com/in/maríaeugeniacosta)
 
