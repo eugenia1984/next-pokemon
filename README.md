@@ -31,7 +31,7 @@ Small application for managing ISR and SSG.
 
 ---
 
-##Project structure
+## Project structure
 
 ```
 > .next
