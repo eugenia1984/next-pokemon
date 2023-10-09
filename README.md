@@ -61,6 +61,7 @@ Small application for managing ISR and SSG.
   pokemon-list.ts
 > pages
   > api
+  > pokemon
   _ app.tsx
   _document.tsx
   index.tsx

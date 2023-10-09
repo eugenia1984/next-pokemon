@@ -1,5 +1,7 @@
-import { useTheme, Image, Spacer, Text} from '@nextui-org/react'
 import React, { FC } from 'react'
+import NextLink from 'next/link'
+import { useTheme, Image, Link, Spacer, Text } from '@nextui-org/react'
+
 
 const Navbar: FC = () => {
   const { theme } = useTheme()
@@ -14,24 +16,32 @@ const Navbar: FC = () => {
       padding: '0px 20px',
       backgroundColor: theme?.colors.gray800.value
     } }>
-      <Image
-        src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/132.png"
-        alt="icono de la aplicación"
-        width={ 70 }
-        height={ 70}
-      />
-      <Text
-        color='white'
-        h1
-        style={ {
-          fontSize: 'var(--nextui-fontSizes-lg)',
-          lineHeight: 'var(--nextui-lineHeight-lg)'
-        } }>
-        <span>P</span>
-        <span style={ { fontSize: 'var(--nextui-fontSizes-md)' } }>okemon</span>
-      </Text>
-      <Spacer css={ {flex: 1} } />
-      <Text color='white'>Favoritos</Text>
+      <NextLink href='/'>
+        <Text
+          color='white'
+          h1
+          style={ {
+            fontSize: 'var(--nextui-fontSizes-lg)',
+            lineHeight: 'var(--nextui-lineHeight-lg)'
+          } }>
+          <Link style={ { alignItems: 'center' } }>
+            <Image
+              src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/132.png"
+              alt="icono de la aplicación"
+              width={ 60 }
+              height={ 60 }
+            />
+            <span>P</span>
+            <span style={ { fontSize: 'var(--nextui-fontSizes-md)' } }>okemon</span>
+          </Link>
+        </Text>
+      </NextLink>
+      <Spacer css={ { flex: 1 } } />
+      <NextLink href='/favorites'>
+        <Text color='white'>
+          Favoritos
+        </Text>
+      </NextLink>
     </div >
   )
 }
