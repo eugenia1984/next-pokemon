@@ -29,6 +29,14 @@ Small application for managing ISR and SSG.
 
 - [**NextUI**](https://nextui.org/)
 
+- [**https://pokeapi.co/**](https://pokeapi.co/)
+
+- [**Axios**](https://axios-http.com/)
+
+## Tools
+
+- [**quicktype.io**](https://quicktype.io/typescript), instantly generate TypeScript interfaces from JSON.
+
 ---
 
 ## Project structure

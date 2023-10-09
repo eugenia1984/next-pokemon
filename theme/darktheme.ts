@@ -4,5 +4,5 @@ export const darkTheme = createTheme({
   type: 'dark',
   theme: {
     colors: {},
-  }
+  },
 })

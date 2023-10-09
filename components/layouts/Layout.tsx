@@ -1,5 +1,7 @@
 import React, { FC, ReactNode } from 'react'
 import Head from 'next/head'
+import Navbar  from '../ui/Navbar'
+import { useTheme } from '@nextui-org/react'
 
 interface LayoutProps {
   children: ReactNode
@@ -7,6 +9,8 @@ interface LayoutProps {
 }
 
 export const Layout: FC<LayoutProps> = ({ children, title }) => {
+  const { theme } = useTheme()
+
   return (
     <>
       <Head>
@@ -15,8 +19,12 @@ export const Layout: FC<LayoutProps> = ({ children, title }) => {
         <meta name="description" content={ `Información sobre el Pokemon: ${ title }` } />
         <meta name="keywords" content={ `${ title }, pokemon, pokedex` } />
       </Head>
-      { /* Navbar*/ }
-      <main>
+      <Navbar />
+      <main style={ {
+        padding: '2rem 1rem',
+        backgroundColor: theme?.colors.gray900.value,
+        minHeight: '100vh'
+      }}>
         { children }
       </main>
     </>
