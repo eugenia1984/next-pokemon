@@ -43,12 +43,22 @@ Small application for managing ISR and SSG.
 
 ```
 > .next
+> api
+  index.ts
+  pokeApi.ts
 > components
   > layouts
     Layout.tsx
   > pokemon
+    index.ts
+    PokemonCard.tsx
   > ui
+    index.ts
+    Navbar.tsx
 > node_modules
+> interfaces
+  index.ts
+  pokemon-list.ts
 > pages
   > api
   _ app.tsx
