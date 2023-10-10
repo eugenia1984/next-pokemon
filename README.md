@@ -50,41 +50,44 @@ Small application for managing ISR and SSG.
   pokeApi.ts
 > components
   > layouts
-    index.ts
-    Layout.tsx
+      index.ts
+      Layout.tsx
   > pokemon
-    FavoriteCardPokemon
-    FavoritesPokemons
-    index.ts
-    PokemonCard.tsx
+      FavoriteCardPokemon
+      FavoritesPokemons
+      index.ts
+      PokemonCard.tsx
   > ui
-    index.ts
-    Navbar.tsx
-    NoFavorites.tsx
+      index.ts
+      Navbar.tsx
+      NoFavorites.tsx
 > interfaces
-  index.ts
-  pokemon-full.ts
-  pokemon-list.ts
+     index.ts
+     pokemon-by-name.ts
+     pokemon-full.ts
+     pokemon-list.ts
   > node_modules
 > pages
-  > api
   > favorites
-    index.tsx
+      index.tsx
+  > name
+      [name].tsx   
   > pokemon
-    [id].tsx
+      [id].tsx
   _ app.tsx
   _document.tsx
   index.tsx
 > public
-  favicon.ico
+    favicon.ico
 > styles
-  globals.css
+    globals.css
 > theme
-  darktheme.ts
-  index.ts
+    darktheme.ts
+    index.ts
 > utils
-  localFavorites.ts
-  index.ts
+    getPokemonInfo.ts
+    index.ts
+    localFavorites.ts
 .eslintrc.json
 .gitignore
 next-env.d.ts
