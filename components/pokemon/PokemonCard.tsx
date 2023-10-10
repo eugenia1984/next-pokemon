@@ -32,7 +32,7 @@ export const PokemonCard: FC<PokemonCardProps> = ({ pokemon }) => {
           />
         </Card.Body>
         <Card.Footer
-          isBlurred
+          isblurred
           css={ {
             position: "absolute",
             bgBlur: "#00080",
