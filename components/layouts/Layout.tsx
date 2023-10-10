@@ -18,6 +18,7 @@ export const Layout: FC<LayoutProps> = ({ children, title }) => {
         <meta name="author" content="María Eugenia Costa" />
         <meta name="description" content={ `Información sobre el Pokemon: ${ title }` } />
         <meta name="keywords" content={ `${ title }, pokemon, pokedex` } />
+        <link rel="icon" type="image/png" href="https://img.icons8.com/color/48/pokemon.png" />
       </Head>
       <Navbar />
       <main style={ {
