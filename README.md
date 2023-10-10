@@ -48,6 +48,7 @@ Small application for managing ISR and SSG.
   pokeApi.ts
 > components
   > layouts
+    index.ts
     Layout.tsx
   > pokemon
     index.ts
@@ -55,13 +56,17 @@ Small application for managing ISR and SSG.
   > ui
     index.ts
     Navbar.tsx
-> node_modules
 > interfaces
   index.ts
+  pokemon-full.ts
   pokemon-list.ts
+  > node_modules
 > pages
   > api
+  > favorites
+    index.tsx
   > pokemon
+    [id].tsx
   _ app.tsx
   _document.tsx
   index.tsx
@@ -71,6 +76,9 @@ Small application for managing ISR and SSG.
   globals.css
 > theme
   darktheme.ts
+  index.ts
+> utils
+  localFavorites.ts
   index.ts
 .eslintrc.json
 .gitignore
