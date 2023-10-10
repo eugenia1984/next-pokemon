@@ -33,6 +33,8 @@ Small application for managing ISR and SSG.
 
 - [**Axios**](https://axios-http.com/)
 
+- [**Canvas Confetti**](https://www.npmjs.com/package/canvas-confetti)
+
 ## Tools
 
 - [**quicktype.io**](https://quicktype.io/typescript), instantly generate TypeScript interfaces from JSON.
@@ -51,11 +53,14 @@ Small application for managing ISR and SSG.
     index.ts
     Layout.tsx
   > pokemon
+    FavoriteCardPokemon
+    FavoritesPokemons
     index.ts
     PokemonCard.tsx
   > ui
     index.ts
     Navbar.tsx
+    NoFavorites.tsx
 > interfaces
   index.ts
   pokemon-full.ts
