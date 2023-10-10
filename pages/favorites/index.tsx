@@ -4,10 +4,11 @@ import { Text } from '@nextui-org/react'
 import { Layout } from '../../components/layouts'
 import NoFavorites from '../../components/ui/NoFavorites'
 import { localFavorites } from '../../utils'
+import FavoritesPokemons from '../../components/pokemon/FavoritesPokemons'
 
-interface FavoritesPagePops { }
+interface FavoritesPageProps { }
 
-const FavoritesPage: NextPage<FavoritesPagePops> = () => {
+const FavoritesPage: NextPage<FavoritesPageProps> = () => {
   const [favoritesPokemons, setFavoritesPokemons] = useState<number[]>([])
 
   useEffect(() => {
@@ -16,11 +17,17 @@ const FavoritesPage: NextPage<FavoritesPagePops> = () => {
 
   return (
     <Layout title='Pokemons - Favoritos'>
-      <Text h2 css={ { textAlign: 'center' } }>
+      <Text h2 css={ { textAlign: 'center', padding: '2rem 1rem' } }>
         Favoritos
       </Text>
-      <NoFavorites />
+      {
+        favoritesPokemons.length === 0 ?
+          <NoFavorites />
+          :
+          <FavoritesPokemons pokemons={ favoritesPokemons } />
+      }
     </Layout>
   )
 }
+
 export default FavoritesPage
