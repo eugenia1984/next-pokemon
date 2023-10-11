@@ -13,9 +13,26 @@ Small application for managing ISR and SSG.
 ## 📢 Features
 
 
-🔜 A Pokemon's web application using an API
+🔜 A Pokemon's web application using the API: [https://pokeapi.co/](https://pokeapi.co/) to take teh information display.
 
-✔️
+✔️ A Home Page with the 151 Pokemons, each Pokemon it's inside a card, and once it`s clicked, it's redirect to that Pokemon detail page.  
+
+✔️ A Pokemons Detail Page to show more information about the Pokemon. And with a **favorite** button, to add or delete the Pokemon from favorites
+
+✔️ A Favorites Page with all the favorites Pokemons.
+
+- Home page:
+
+![image](https://github.com/eugenia1984/next-pokemon/assets/72580574/c9d25353-ddff-4b84-8c63-0306a6e4c1b9)
+
+- Favorites Page:
+
+![image](https://github.com/eugenia1984/next-pokemon/assets/72580574/e75b58eb-2d47-43ed-a2e9-2d0230dea4f4)
+
+- Pokemon information by name
+
+![image](https://github.com/eugenia1984/next-pokemon/assets/72580574/f264f7b7-f626-4f91-b871-f73153eba0a7)
+
 
 ---
 
