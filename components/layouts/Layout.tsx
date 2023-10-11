@@ -2,6 +2,7 @@ import React, { FC, ReactNode } from 'react'
 import Head from 'next/head'
 import Navbar  from '../ui/Navbar'
 import { useTheme } from '@nextui-org/react'
+import FooterApp from '../ui/FooterApp'
 
 interface LayoutProps {
   children: ReactNode
@@ -28,6 +29,7 @@ export const Layout: FC<LayoutProps> = ({ children, title }) => {
       }}>
         { children }
       </main>
+      <FooterApp />
     </>
   )
 }

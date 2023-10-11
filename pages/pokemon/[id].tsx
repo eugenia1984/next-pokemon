@@ -6,30 +6,12 @@ import { Layout } from '../../components/layouts'
 import { Pokemon } from '../../interfaces'
 import { getPokemonInfo, localFavorites } from '../../utils'
 import PokemonCardImg from '../../components/pokemon/PokemonCardImg'
+import PokemonCardFavorite from '../../components/pokemon/PokemonCardFavorite'
 interface PokemonPagePops {
   pokemon: Pokemon
 }
 
 const PokemonPage: NextPage<PokemonPagePops> = ({ pokemon }) => {
-  const [isInFavorites, setIsInFavorites] = useState<boolean>(localFavorites.existInFavorites(pokemon.id))
-
-  const onToggleFavorite = () => {
-    localFavorites.toggleFavorite(pokemon.id)
-    setIsInFavorites(!isInFavorites)
-
-    if (isInFavorites) return
-
-    confetti({
-      zIndex: 999,
-      particleCount: 100,
-      spread: 160,
-      angle: -100,
-      origin: {
-        x: 1,
-        y: 0,
-      }
-    })
-  }
 
   return (
     <Layout title={ pokemon.name }>
@@ -42,68 +24,7 @@ const PokemonPage: NextPage<PokemonPagePops> = ({ pokemon }) => {
           pokemonName={ pokemon.name }
         />
         <Grid xs={ 12 } sm={ 8 }>
-          <Card
-            hoverable
-            css={ {
-              border: '1px solid #fff3',
-              background: '#444444',
-              padding: '8px'
-            } }
-          >
-            <Card.Header
-              css={ {
-                display: 'flex',
-                justifyContent: 'space-between',
-                flexWrap: 'wrap',
-                gap: '12px'
-              } }
-            >
-              <Text
-                h2
-                transform='capitalize'
-              >
-                { pokemon.name }
-              </Text>
-              <Button
-                color='gradient'
-                ghost={ !isInFavorites }
-                onClick={ onToggleFavorite }
-              >
-                <span style={ { textTransform: 'uppercase' } }>
-                  { isInFavorites ? 'En favoritos' : 'Guardar en favoritos' }
-                </span>
-              </Button>
-            </Card.Header>
-            <Card.Body>
-              <Text size={ 30 }>Sprites:</Text>
-              <Container display='flex' direction='row'>
-                <Image
-                  src={ pokemon.sprites.front_default }
-                  alt={ pokemon.name }
-                  width={ 100 }
-                  height={ 100 }
-                />
-                <Image
-                  src={ pokemon.sprites.back_default }
-                  alt={ pokemon.name }
-                  width={ 100 }
-                  height={ 100 }
-                />
-                <Image
-                  src={ pokemon.sprites.front_shiny }
-                  alt={ pokemon.name }
-                  width={ 100 }
-                  height={ 100 }
-                />
-                <Image
-                  src={ pokemon.sprites.back_shiny }
-                  alt={ pokemon.name }
-                  width={ 100 }
-                  height={ 100 }
-                />
-              </Container>
-            </Card.Body>
-          </Card>
+          <PokemonCardFavorite pokemon={ pokemon } />
         </Grid>
       </Grid.Container>
     </Layout>

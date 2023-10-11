@@ -18,7 +18,7 @@ const FavoritesPage: NextPage<FavoritesPageProps> = () => {
   return (
     <Layout title='Pokemons - Favoritos'>
       <Text h2 css={ { textAlign: 'center', padding: '2rem 1rem' } }>
-        Favoritos
+        Favorites
       </Text>
       {
         favoritesPokemons.length === 0 ?

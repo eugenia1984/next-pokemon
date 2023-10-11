@@ -38,7 +38,7 @@ const Navbar: FC = () => {
       <Spacer css={ { flex: 1 } } />
         <Link href='/favorites'>
           <Text color='white'>
-            Favoritos
+            FAVORITES
           </Text>
         </Link>
     </div >
