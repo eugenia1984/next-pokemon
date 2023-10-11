@@ -1,6 +1,6 @@
 import { Sprites } from './pokemon-full'
 
-export type PokemonShort = {
+export type PokemonByName = {
   id: number
   name: string
   sprites: Sprites

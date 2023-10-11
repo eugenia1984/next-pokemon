@@ -1,6 +1,9 @@
-import React, { FC } from 'react'
+import React, { FC, useEffect, useState } from 'react'
 import { useRouter } from 'next/router'
 import { Card, Grid } from '@nextui-org/react'
+import { pokeApi } from '../../api'
+import { PokemonListResponse } from '../../interfaces'
+import { SmallPokemon } from '../../interfaces/pokemon-list';
 
 interface FavoriteCardPokemonProps {
   pokemonId: number
@@ -8,9 +11,22 @@ interface FavoriteCardPokemonProps {
 
 const FavoriteCardPokemon: FC<FavoriteCardPokemonProps> = ({ pokemonId }) => {
   const router = useRouter()
+  const [pokemonByName, setPokemonByName] = useState<string>('')
+
+  useEffect(() => {
+    const getPokemonsNameById = async () => {
+      const { data } = await pokeApi.get<PokemonListResponse>('/pokemon?limit=151')
+      
+      if (data) {
+        setPokemonByName(data.results[pokemonId].name)
+      }
+    }
+    getPokemonsNameById()
+    
+  }, [pokemonId])
 
   const onFavoriteClicked = () => {
-    router.push(`/pokemon/${pokemonId}`)
+    router.push(`/name/${ pokemonByName }`)
   }
 
   return (
