@@ -46,18 +46,23 @@ Small application for managing ISR and SSG.
 ```
 > .next
 > api
-  index.ts
-  pokeApi.ts
+   index.ts
+   pokeApi.ts
 > components
-  > layouts
+   > layouts
       index.ts
       Layout.tsx
-  > pokemon
-      FavoriteCardPokemon
-      FavoritesPokemons
+   > pokemon
+      FavoriteCardPokemon.tsx
+      FavoritesPokemons.tsx
       index.ts
       PokemonCard.tsx
-  > ui
+      PokemonCardAbilities.tsx
+      PokemonCardFavorite.tsx
+      PokemonCardTypes.tsx
+      PokemonTable.tsx
+   > ui
+      FooterApp.tsx
       index.ts
       Navbar.tsx
       NoFavorites.tsx
@@ -66,17 +71,17 @@ Small application for managing ISR and SSG.
      pokemon-by-name.ts
      pokemon-full.ts
      pokemon-list.ts
-  > node_modules
+   > node_modules
 > pages
-  > favorites
+   > favorites
       index.tsx
-  > name
+   > name
       [name].tsx   
-  > pokemon
+   > pokemon
       [id].tsx
-  _ app.tsx
-  _document.tsx
-  index.tsx
+   _ app.tsx
+   _document.tsx
+   index.tsx
 > public
     favicon.ico
 > styles

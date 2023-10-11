@@ -12,7 +12,7 @@ interface HomePagePops {
 const HomePage: NextPage<HomePagePops> = ({ pokemons }) => {
 
   return (
-    <Layout title='Listado de Pokemons'>
+    <Layout title='Pokemons'>
       <Grid.Container gap={ 2 } justify='flex-start'>
         { pokemons.map(pokemon => (
           <PokemonCard pokemon={ pokemon } key={ pokemon.name } />

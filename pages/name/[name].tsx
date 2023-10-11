@@ -24,7 +24,7 @@ const PokemonByNamePage: NextPage<PokemonByNamePagePops> = ({ pokemon }) => {
       >
         <PokemonCardImg
           pokemonName={ pokemon.name }
-          imgSrc={ pokemon.sprites.other?.dream_world.front_default || '/no-image.png' }
+          imgSrc={ pokemon.sprites.other?.dream_world.front_default || '/img/banner.png' }
         />
         <Grid xs={ 12 } sm={ 8 }>
           <PokemonCardFavorite pokemon={ pokemon } />

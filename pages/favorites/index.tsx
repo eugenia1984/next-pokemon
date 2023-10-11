@@ -16,7 +16,7 @@ const FavoritesPage: NextPage<FavoritesPageProps> = () => {
   }, [])
 
   return (
-    <Layout title='Pokemons - Favoritos'>
+    <Layout title='Pokemons - Favorites'>
       <Text h2 css={ { textAlign: 'center', padding: '2rem 1rem' } }>
         Favorites
       </Text>
