@@ -14,8 +14,7 @@ interface PokemonByNamePagePops {
 }
 
 const PokemonByNamePage: NextPage<PokemonByNamePagePops> = ({ pokemon }) => {
-  console.log('Pokemon ', pokemon)
-
+  
   return (
     <Layout title={ pokemon.name }>
       <Grid.Container
