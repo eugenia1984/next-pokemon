@@ -3,15 +3,14 @@ import { NextPage, GetStaticProps, GetStaticPaths } from 'next'
 import { Button, Card, Container, Grid, Image, Text } from '@nextui-org/react'
 import confetti from 'canvas-confetti'
 import { Layout } from '../../components/layouts'
-import { pokeApi } from '../../api'
 import { Pokemon } from '../../interfaces'
-import { localFavorites } from '../../utils'
+import { getPokemonInfo, localFavorites } from '../../utils'
+import PokemonCardImg from '../../components/pokemon/PokemonCardImg'
 interface PokemonPagePops {
   pokemon: Pokemon
 }
 
 const PokemonPage: NextPage<PokemonPagePops> = ({ pokemon }) => {
-  // console.log(pokemon)
   const [isInFavorites, setIsInFavorites] = useState<boolean>(localFavorites.existInFavorites(pokemon.id))
 
   const onToggleFavorite = () => {
@@ -38,25 +37,10 @@ const PokemonPage: NextPage<PokemonPagePops> = ({ pokemon }) => {
         css={ { marginTop: '12px' } }
         gap={ 2 }
       >
-        <Grid xs={ 12 } sm={ 4 }>
-          <Card
-            hoverable
-            css={ {
-              padding: '30px',
-              border: '1px solid #fff3',
-              background: '#444444'
-            } }
-          >
-            <Card.Body>
-              <Card.Image
-                src={ pokemon.sprites.other?.dream_world.front_default || '/no-image.png' }
-                alt={ pokemon.name }
-                width='100%'
-                height='200px'
-              />
-            </Card.Body>
-          </Card>
-        </Grid>
+        <PokemonCardImg
+          imgSrc={ pokemon.sprites.other?.dream_world.front_default || '/no-image.png' }
+          pokemonName={ pokemon.name }
+        />
         <Grid xs={ 12 } sm={ 8 }>
           <Card
             hoverable
@@ -82,11 +66,11 @@ const PokemonPage: NextPage<PokemonPagePops> = ({ pokemon }) => {
               </Text>
               <Button
                 color='gradient'
-                ghost={ !isInFavorites}
+                ghost={ !isInFavorites }
                 onClick={ onToggleFavorite }
               >
                 <span style={ { textTransform: 'uppercase' } }>
-                  { isInFavorites ?  'En favoritos': 'Guardar en favoritos'} 
+                  { isInFavorites ? 'En favoritos' : 'Guardar en favoritos' }
                 </span>
               </Button>
             </Card.Header>
@@ -139,11 +123,10 @@ export const getStaticPaths: GetStaticPaths = async (ctx) => {
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   const { id } = params as { id: string }
-  const { data } = await pokeApi.get<Pokemon>(`/pokemon/${ id }`)
 
   return {
     props: {
-      pokemon: data
+      pokemon: await getPokemonInfo(id)
     }
   }
 }
