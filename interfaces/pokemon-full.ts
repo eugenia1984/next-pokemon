@@ -1,17 +1,9 @@
 export type Pokemon = {
   abilities: Ability[]
   base_experience: number
-  forms: Species[]
-  game_indices: GameIndex[]
   height: number
-  held_items: any[]
   id: number
-  is_default: boolean
-  location_area_encounters: string
-  moves: Move[]
   name: string
-  order: number
-  past_types: any[]
   species: Species
   sprites: Sprites
   stats: Stat[]
@@ -28,16 +20,6 @@ export type Ability = {
 export type Species = {
   name: string
   url: string
-}
-
-export type GameIndex = {
-  game_index: number
-  version: Species
-}
-
-export type Move = {
-  move: Species
-  version_group_details: VersionGroupDetail[]
 }
 
 export type VersionGroupDetail = {

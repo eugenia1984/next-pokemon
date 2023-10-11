@@ -1,6 +1,6 @@
 import React from 'react'
 import { NextPage, GetStaticProps, GetStaticPaths } from 'next'
-import { Grid } from '@nextui-org/react'
+import { Card, Grid, Text } from '@nextui-org/react'
 import { Layout } from '../../components/layouts'
 import { pokeApi } from '../../api'
 import { Pokemon, PokemonListResponse } from '../../interfaces'
@@ -61,7 +61,18 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 
   return {
     props: {
-      pokemon: data
+      pokemon: {
+        abilities: data.abilities,
+        base_experience: data.base_experience,
+        height: data.height,
+        id: data.id,
+        name: data.name,
+        species: data.species,
+        sprites: data.sprites,
+        stats: data.stats,
+        types: data.types,
+        weight: data.weight
+      }
     }
   }
 }
