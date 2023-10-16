@@ -15,7 +15,7 @@ Small application for managing ISR and SSG.
 ## 📢 Features
 
 
-🔜 A Pokemon's web application using the API: [https://pokeapi.co/](https://pokeapi.co/) to take teh information display.
+🔜 A Pokemon's web application using the API: [https://pokeapi.co/](https://pokeapi.co/) to take the information display.
 
 ✔️ A Home Page with the 151 Pokemons, each Pokemon it's inside a card, and once it`s clicked, it's redirect to that Pokemon detail page.  
 
