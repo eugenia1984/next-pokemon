@@ -8,6 +8,8 @@ Small application for managing ISR and SSG.
 
 ## 📦 Demo 
 
+[https://next-pokemon-static-lime-seven.vercel.app/](https://next-pokemon-static-lime-seven.vercel.app/)
+
 ---
 
 ## 📢 Features
